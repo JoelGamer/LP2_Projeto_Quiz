@@ -4,7 +4,7 @@ import com.company.joelgamer.Models.*;
 import com.company.joelgamer.Models.Class;
 import java.util.ArrayList;
 
-public class QuizzesStorage {
+public class SystemStorage {
 
     private ArrayList<Class> classes;
     private ArrayList<Professor> professors;
@@ -12,7 +12,7 @@ public class QuizzesStorage {
     private ArrayList<Question> questions;
     private ArrayList<Quiz> quizzes;
 
-    public QuizzesStorage() {
+    public SystemStorage() {
         classes = new ArrayList<>();
         professors = new ArrayList<>();
         students = new ArrayList<>();

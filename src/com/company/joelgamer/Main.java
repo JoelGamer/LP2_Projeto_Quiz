@@ -1,14 +1,16 @@
 package com.company.joelgamer;
 
 import com.company.joelgamer.Models.Class;
+import com.company.joelgamer.Models.Professor;
 import com.company.joelgamer.Register.RegisterClass;
+import com.company.joelgamer.Register.RegisterProfessor;
 import com.company.joelgamer.Show.ShowClasses;
-import com.company.joelgamer.Storage.QuizzesStorage;
+import com.company.joelgamer.Storage.SystemStorage;
 import java.util.Scanner;
 
 public class Main {
 
-    private static QuizzesStorage quizzesStorage = new QuizzesStorage();
+    private static SystemStorage systemStorage = new SystemStorage();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -28,6 +30,8 @@ public class Main {
         System.out.println("Escolha uma das opções abaixo para utilizar o sistema de quizzes:");
         System.out.println("1 - Cadastrar uma nova sala");
         System.out.println("2 - Exibir as salas cadastradas");
+        System.out.println("3 - Cadastrar um(a) novo(a) professor(a)");
+        System.out.println("4 - Exibir os(as) professores(as) cadastrados(as)");
         System.out.println("0 - Sair do sistema de quizzes");
     }
 
@@ -37,20 +41,31 @@ public class Main {
                 while(true) {
                     Class aClass = new RegisterClass().registerClass();
                     if(aClass != null){
-                        quizzesStorage.getClasses().add(aClass);
+                        systemStorage.getClasses().add(aClass);
                         break;
                     }
                 }
                 break;
             case 2 :
                 System.out.println("--------------------------------");
-                new ShowClasses().showClasses(quizzesStorage.getClasses());
+                new ShowClasses().showClasses(systemStorage.getClasses());
                 System.out.println("--------------------------------");
+                break;
+            case 3 :
+                while(true) {
+                    Professor professor = new RegisterProfessor().registerProfessor();
+                    if(professor != null){
+                        systemStorage.getProfessors().add(professor);
+                        break;
+                    }
+                }
                 break;
             case 0 :
                 System.out.println("Obrigado por utilizar o sistema! Até mais!");
                 System.exit(0);
                 break;
+            default :
+                System.out.println("O valor que você informou é inválido! Insira novamente!\n");
         }
     }
 }
