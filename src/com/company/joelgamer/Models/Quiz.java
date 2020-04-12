@@ -1,8 +1,11 @@
 package com.company.joelgamer.Models;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Quiz {
+public class Quiz implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String name;
     private ArrayList<Question> questions;
     private ArrayList<Class> classes;
@@ -25,6 +28,7 @@ public class Quiz {
             valid = false;
         }
 
+        if(valid) System.out.println("Quiz " + name + " cadastrado com sucesso!\n");
         return valid;
     }
 

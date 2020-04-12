@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class RegisterProfessor {
     public Professor registerProfessor(){
-        System.out.println("Insira o nome do professor(a) para cadastrar ele(a):");
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Insira o nome do(a) professor(a):");
         String name = scanner.nextLine();
 
         Professor professor = new Professor();

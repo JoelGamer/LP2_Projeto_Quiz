@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class RegisterClass {
     public Class registerClass(){
-        System.out.println("Insira o nome da turma para cadastrar ela:");
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Insira o nome da turma:");
         String name = scanner.nextLine();
 
         Class aClass = new Class();

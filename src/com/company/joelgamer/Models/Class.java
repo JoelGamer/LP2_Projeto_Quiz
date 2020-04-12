@@ -1,17 +1,21 @@
 package com.company.joelgamer.Models;
 
-public class Class {
+import java.io.Serializable;
+
+public class Class implements Serializable {
+
+    private static final long serialVersionUID = 1L;
     private String name;
 
     public boolean readData(String name){
         boolean valid = true;
 
         if(!setName(name)){
-            System.out.println("É obrigatório inserir nome da classe!");
+            System.out.println("É obrigatório inserir o nome da classe!");
             valid = false;
         }
 
-        if(valid) System.out.println("Turma " + name + " cadastrado com sucesso!");
+        if(valid) System.out.println(name + " cadastrado com sucesso!\n");
         return valid;
     }
 

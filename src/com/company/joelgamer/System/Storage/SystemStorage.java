@@ -1,4 +1,4 @@
-package com.company.joelgamer.Storage;
+package com.company.joelgamer.System.Storage;
 
 import com.company.joelgamer.Models.*;
 import com.company.joelgamer.Models.Class;
@@ -24,39 +24,39 @@ public class SystemStorage {
         return classes;
     }
 
-    public void setClasses(ArrayList<Class> classes) {
-        this.classes = classes;
+    public void addToClasses(Class aClass) {
+        classes.add(aClass);
     }
 
     public ArrayList<Professor> getProfessors() {
         return professors;
     }
 
-    public void setProfessors(ArrayList<Professor> professors) {
-        this.professors = professors;
+    public void addToProfessors(Professor professor) {
+        professors.add(professor);
     }
 
     public ArrayList<Student> getStudents() {
         return students;
     }
 
-    public void setStudents(ArrayList<Student> students) {
-        this.students = students;
+    public void addToStudents(Student student) {
+        students.add(student);
     }
 
     public ArrayList<Question> getQuestions() {
         return questions;
     }
 
-    public void setQuestions(ArrayList<Question> questions) {
-        this.questions = questions;
+    public void addToQuestions(Question question) {
+        questions.add(question);
     }
 
     public ArrayList<Quiz> getQuizzes() {
         return quizzes;
     }
 
-    public void setQuizzes(ArrayList<Quiz> quizzes) {
-        this.quizzes = quizzes;
+    public void addToQuizzes(Quiz quiz) {
+        quizzes.add(quiz);
     }
 }

@@ -8,6 +8,8 @@ public class ShowClasses {
     public void showClasses(ArrayList<Class> classes){
         for(Class aClass : classes){
             aClass.showData();
+            System.out.println("--------------------------------");
         }
+        if(classes.isEmpty()) System.out.println("--------------------------------");
     }
 }
