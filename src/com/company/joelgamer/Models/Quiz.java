@@ -15,16 +15,16 @@ public class Quiz implements Serializable {
         boolean valid = true;
 
         if(!setName(name)) {
-            System.out.println("É obrigatório inserir nome do quiz!");
+            System.out.println("É obrigatório inserir o nome do quiz!");
             valid = false;
         } if (!setQuestions(questions)) {
-            System.out.println("É obrigatório inserir nome do quiz!");
+            System.out.println("É obrigatório inserir pelo menos uma questão ao quiz!");
             valid = false;
         } if (!setClasses(classes)){
-            System.out.println("É obrigatório inserir nome do quiz!");
+            System.out.println("É obrigatório inserir pelo menos uma turma ao quiz!");
             valid = false;
         } if (!setSituation(situation)){
-            System.out.println("É obrigatório inserir nome do quiz!");
+            System.out.println("É obrigatório inserir a situação quiz!");
             valid = false;
         }
 

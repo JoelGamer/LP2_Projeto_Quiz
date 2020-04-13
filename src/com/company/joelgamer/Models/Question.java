@@ -10,10 +10,21 @@ public class Question implements Serializable {
     private ArrayList<String> answers;
     private int correctAnswer;
 
-    public void readData(String title, ArrayList<String> answers, int correctAnswer){
-        this.title = title;
-        this.answers = answers;
-        this.correctAnswer = correctAnswer;
+    public boolean readData(String title, ArrayList<String> answers, int correctAnswer){
+        boolean valid = true;
+
+        if(!setTitle(title)){
+            System.out.println("É obrigatório ter o titulo da questão!");
+            valid = false;
+        } if(!setAnswers(answers)){
+            System.out.println("É obrigatório ter pelo menos uma resposta para escolher!");
+            valid = false;
+        } if(!setCorrectAnswer(correctAnswer)){
+            System.out.println("É obrigatório ter um valor para saber qual que é a resposta correta!");
+            valid = false;
+        }
+        if(valid) System.out.println("Questão " + title + " criado com sucesso!");
+        return valid;
     }
 
     public void showData(){
@@ -26,23 +37,29 @@ public class Question implements Serializable {
         return title;
     }
 
-    private void setTitle(String title) {
+    private boolean setTitle(String title) {
+        if(title.equals("")) return false;
         this.title = title;
+        return true;
     }
 
     private ArrayList<String> getAnswers() {
         return answers;
     }
 
-    private void setAnswers(ArrayList<String> answers) {
+    private boolean setAnswers(ArrayList<String> answers) {
+        if(answers.isEmpty()) return false;
         this.answers = answers;
+        return true;
     }
 
     private int getCorrectAnswer() {
         return correctAnswer;
     }
 
-    private void setCorrectAnswer(int correctAnswer) {
+    private boolean setCorrectAnswer(int correctAnswer) {
+        if(correctAnswer <= 0) return false;
         this.correctAnswer = correctAnswer;
+        return true;
     }
 }

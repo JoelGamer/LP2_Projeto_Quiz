@@ -2,6 +2,7 @@ package com.company.joelgamer.System;
 
 import com.company.joelgamer.Show.ShowClasses;
 import com.company.joelgamer.Show.ShowProfessors;
+import com.company.joelgamer.Show.ShowQuestions;
 import com.company.joelgamer.Show.ShowStudents;
 import com.company.joelgamer.System.Storage.SystemStorage;
 
@@ -48,5 +49,6 @@ public class SystemConsole {
         System.out.println("--------------------------------");
         System.out.println("Existem " + systemStorage.getQuestions().size() + " questões");
         System.out.println("--------------------------------");
+        new ShowQuestions().showQuestions(systemStorage.getQuestions());
     }
 }
