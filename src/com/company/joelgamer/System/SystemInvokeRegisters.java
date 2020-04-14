@@ -44,7 +44,11 @@ public class SystemInvokeRegisters {
 
     public void invokeRegisterQuiz(){
         while(true){
-
+            Quiz quiz = new RegisterQuiz().registerQuiz();
+            if(quiz != null){
+                systemStorage.addToQuizzes(quiz);
+                break;
+            }
         }
     }
 

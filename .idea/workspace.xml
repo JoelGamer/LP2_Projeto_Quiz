@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4238e58a-0c59-4f88-84fd-72531ffd755b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowQuestions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowQuestion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowQuiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowQuizzes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOption.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/SystemConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/SystemConsole.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Quiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionQuiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemInvokeRegisters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemInvokeRegisters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,28 +139,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586580209128" />
-    <state width="1874" height="315" key="GridCell.Tab.0.bottom" timestamp="1586803889487">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom" timestamp="1586823577620">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586784194647" />
+    <state width="1877" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586823577620" />
     <state width="1874" height="315" key="GridCell.Tab.0.bottom/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586803889487" />
     <state width="1320" height="175" key="GridCell.Tab.0.bottom/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586466052733" />
-    <state width="1874" height="315" key="GridCell.Tab.0.center" timestamp="1586803889487">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center" timestamp="1586823577620">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586784194647" />
+    <state width="1877" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586823577620" />
     <state width="1874" height="315" key="GridCell.Tab.0.center/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586803889487" />
     <state width="1320" height="175" key="GridCell.Tab.0.center/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586466052733" />
-    <state width="1874" height="315" key="GridCell.Tab.0.left" timestamp="1586803889487">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left" timestamp="1586823577620">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586784194647" />
+    <state width="1877" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586823577620" />
     <state width="1874" height="315" key="GridCell.Tab.0.left/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586803889487" />
     <state width="1320" height="175" key="GridCell.Tab.0.left/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586466052733" />
-    <state width="1874" height="315" key="GridCell.Tab.0.right" timestamp="1586803889487">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right" timestamp="1586823577620">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586784194647" />
+    <state width="1877" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586823577620" />
     <state width="1874" height="315" key="GridCell.Tab.0.right/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586803889487" />
     <state width="1320" height="175" key="GridCell.Tab.0.right/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586466052733" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586729150558">
@@ -171,10 +187,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586390809005" />
-    <state x="1752" y="1333" key="com.intellij.ide.util.TipDialog" timestamp="1586798839918">
-      <screen x="1285" y="1080" width="1366" height="768" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586825367931">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586784179716" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586825367931" />
     <state x="1752" y="1333" key="com.intellij.ide.util.TipDialog/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586798839918" />
     <state x="342" y="140" key="new project wizard" timestamp="1586387439053">
       <screen x="0" y="0" width="1920" height="1040" />

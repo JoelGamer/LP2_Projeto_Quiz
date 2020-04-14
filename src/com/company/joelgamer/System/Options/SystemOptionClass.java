@@ -44,7 +44,7 @@ public class SystemOptionClass {
                 systemConsole.printClasses();
                 break;
             case 3 :
-
+                systemConsole.printClass();
                 break;
             case 0 :
                 return 1;

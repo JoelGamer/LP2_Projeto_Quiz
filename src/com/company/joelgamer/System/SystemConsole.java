@@ -1,27 +1,25 @@
 package com.company.joelgamer.System;
 
-import com.company.joelgamer.Show.ShowClasses;
-import com.company.joelgamer.Show.ShowProfessors;
-import com.company.joelgamer.Show.ShowQuestions;
-import com.company.joelgamer.Show.ShowStudents;
+import com.company.joelgamer.Show.*;
 import com.company.joelgamer.System.Storage.SystemStorage;
 
+import java.util.Scanner;
+
 public class SystemConsole {
+
+    private Scanner scanner = new Scanner(System.in);
     private SystemStorage systemStorage;
 
     public SystemConsole(SystemStorage systemStorage) {
         this.systemStorage = systemStorage;
     }
 
-    public void systemPrintOptions(){
-        System.out.println("Escolha uma das opções abaixo para utilizar o sistema de quizzes:");
-        System.out.println("1 - Cadastrar uma nova turma");
-        System.out.println("2 - Exibir as turmas cadastradas");
-        System.out.println("3 - Cadastrar um(a) novo(a) professor(a)");
-        System.out.println("4 - Exibir os(as) professores(as) cadastrados(as)");
-        System.out.println("5 - Cadastrar um(a) novo(a) aluno(a)");
-        System.out.println("6 - Exibir os(as) aluno(as) cadastrados(as)");
-        System.out.println("0 - Sair do sistema de quizzes");
+    public void printClass(){
+        System.out.println("Insira o nome da turma que você deseja buscar:");
+        String name = scanner.nextLine();
+        System.out.println("--------------------------------");
+        new ShowClass(systemStorage).showClass(name);
+        System.out.println("--------------------------------");
     }
 
     public void printClasses(){
@@ -31,6 +29,10 @@ public class SystemConsole {
         new ShowClasses().showClasses(systemStorage.getClasses());
     }
 
+    public void printProfessor(){
+
+    }
+
     public void printProfessors(){
         System.out.println("--------------------------------");
         System.out.println("Existem " + systemStorage.getProfessors().size() + " professores(as)");
@@ -38,11 +40,8 @@ public class SystemConsole {
         new ShowProfessors().showProfessors(systemStorage.getProfessors());
     }
 
-    public void printStudents(){
-        System.out.println("--------------------------------");
-        System.out.println("Existem " + systemStorage.getStudents().size() + " alunos(as)");
-        System.out.println("--------------------------------");
-        new ShowStudents().showStudents(systemStorage.getStudents());
+    public void printQuestion(){
+
     }
 
     public void printQuestions(){
@@ -50,5 +49,27 @@ public class SystemConsole {
         System.out.println("Existem " + systemStorage.getQuestions().size() + " questões");
         System.out.println("--------------------------------");
         new ShowQuestions().showQuestions(systemStorage.getQuestions());
+    }
+
+    public void printQuiz(){
+
+    }
+
+    public void printQuizzes(){
+        System.out.println("--------------------------------");
+        System.out.println("Existem " + systemStorage.getQuizzes().size() + " quizzes");
+        System.out.println("--------------------------------");
+        new ShowQuizzes().showQuizzes(systemStorage.getQuizzes());
+    }
+
+    public void printStudent(){
+
+    }
+
+    public void printStudents(){
+        System.out.println("--------------------------------");
+        System.out.println("Existem " + systemStorage.getStudents().size() + " alunos(as)");
+        System.out.println("--------------------------------");
+        new ShowStudents().showStudents(systemStorage.getStudents());
     }
 }

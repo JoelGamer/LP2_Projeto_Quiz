@@ -34,27 +34,9 @@ public class Quiz implements Serializable {
 
     public void showData(){
         System.out.println("Titulo do quiz: " + getName());
-
-        StringBuilder showQuestion = new StringBuilder();
-        for (Question question : getQuestions()) {
-            showQuestion.append(question.getTitle()).append(" ");
-        }
-        System.out.println("Questões relacionados ao quiz: " + showQuestion);
-
-        StringBuilder showClasses = new StringBuilder();
-        for (Class aClass : getClasses()) {
-            showClasses.append(aClass.getName()).append(" ");
-        }
-        System.out.println("Classes vinculados a esse quiz: " + showClasses);
-
-        switch (getSituation()){
-            case 1 :
-                System.out.println("Situação do quiz: Rascunho");
-            case 2 :
-                System.out.println("Situação do quiz: Pronto");
-            case 3 :
-                System.out.println("Situação do quiz: Inativo");
-        }
+        System.out.println("Questões relacionados ao quiz: " + arrayToString(getQuestions()));
+        System.out.println("Classes vinculados a esse quiz: " + arrayToString(getClasses()));
+        System.out.println("Situação do quiz: " + getStringSituation());
     }
 
     public String getName() {
@@ -87,8 +69,34 @@ public class Quiz implements Serializable {
         return true;
     }
 
+    private String arrayToString(ArrayList<?> arrayList){
+        StringBuilder string = new StringBuilder();
+        for(int i=0;i<arrayList.size();i++){
+            if(arrayList.get(i) instanceof Class) string.append("Turma: ").append(((Class) arrayList.get(i)).getName());
+            if(arrayList.get(i) instanceof Question) string.append("Questão ").append(i+1).append(": ").append(((Question) arrayList.get(i)).getTitle());
+            if((i+1) != arrayList.size()) string.append(", ");
+        }
+        return string.toString();
+    }
+
     private byte getSituation() {
         return situation;
+    }
+
+    private String getStringSituation(){
+        String string = "";
+        switch (getSituation()){
+            case 1 :
+                string = "Rascunho";
+                break;
+            case 2 :
+                string = "Pronto";
+                break;
+            case 3 :
+                string = "Inativo";
+                break;
+        }
+        return string;
     }
 
     public boolean setSituation(byte situation) {

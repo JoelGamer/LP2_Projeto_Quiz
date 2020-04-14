@@ -55,7 +55,7 @@ public class SystemOption {
                 new SystemOptionQuestion(systemInvokeRegisters, systemConsole).optionsQuestions(scanner);
                 break;
             case 5 :
-                new SystemOptionQuiz();
+                new SystemOptionQuiz(systemInvokeRegisters, systemConsole).optionsQuizzes(scanner);
                 break;
             case 0 :
                 System.out.println("Obrigado por utilizar o sistema! Até mais!");

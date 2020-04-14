@@ -43,7 +43,7 @@ public class RegisterStudent {
         while (true){
             System.out.println("Insira a turma do(a) aluno(a)");
             String stringClass = scanner.nextLine();
-            aClass = systemSearch.SystemSearchClass(stringClass);
+            aClass = systemSearch.systemSearchClass(stringClass);
             if(aClass == null){
                 System.out.println("Não existe nenhuma turma com esse nome, insira novamente a turma.");
                 continue;

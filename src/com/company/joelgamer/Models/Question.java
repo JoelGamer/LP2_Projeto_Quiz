@@ -29,7 +29,7 @@ public class Question implements Serializable {
 
     public void showData(){
         System.out.println("Titulo da pergunta: " + getTitle());
-        System.out.println("Respostas relacionadas a questão: " + getAnswers().toString());
+        System.out.println("Respostas relacionadas a questão: " + answersToString());
         System.out.println("ID da resposta correta: " + getCorrectAnswer());
     }
 
@@ -51,6 +51,15 @@ public class Question implements Serializable {
         if(answers.isEmpty()) return false;
         this.answers = answers;
         return true;
+    }
+
+    private String answersToString(){
+        StringBuilder string = new StringBuilder();
+        for(int i=0;i<getAnswers().size();i++){
+            string.append("Questão ").append(i + 1).append(": ").append(getAnswers().get(i));
+            if((i+1) != getAnswers().size()) string.append(", ");
+        }
+        return string.toString();
     }
 
     private int getCorrectAnswer() {
