@@ -44,6 +44,7 @@ public class SystemOptionStudents {
                 systemConsole.printStudents();
                 break;
             case 3 :
+                systemConsole.printStudent();
                 break;
             case 0 :
                 return 1;

@@ -23,7 +23,7 @@ public class Professor implements Serializable {
         System.out.println("Nome do(a) Professor(a): " + getName());
     }
 
-    private String getName() {
+    public String getName() {
         return name;
     }
 

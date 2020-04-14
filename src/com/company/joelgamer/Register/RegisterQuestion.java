@@ -34,7 +34,7 @@ public class RegisterQuestion {
         }
         scanner.nextLine();
         for(int i=1;i<=quantity;i++){
-            System.out.println("Insira a " + i + "ª resposta");
+            System.out.println("Insira a " + i + "ª resposta que deseja inserir na questão");
             while(true){
                 String answer = scanner.nextLine();
                 System.out.println("Confirma que a resposta que deseja adicionar é essa: (S/N)");

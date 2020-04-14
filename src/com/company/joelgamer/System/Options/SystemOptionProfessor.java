@@ -44,6 +44,7 @@ public class SystemOptionProfessor {
                 systemConsole.printProfessors();
                 break;
             case 3 :
+                systemConsole.printProfessor();
                 break;
             case 0 :
                 return 1;

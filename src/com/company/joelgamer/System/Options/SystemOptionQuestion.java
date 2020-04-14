@@ -44,6 +44,7 @@ public class SystemOptionQuestion {
                 systemConsole.printQuestions();
                 break;
             case 3 :
+                systemConsole.printQuestion();
                 break;
             case 0 :
                 return 1;

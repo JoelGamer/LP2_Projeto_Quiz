@@ -37,27 +37,27 @@ public class Student implements Serializable {
         return name;
     }
 
-    public boolean setName(String name) {
+    private boolean setName(String name) {
         if(name.equals("")) return false;
         this.name = name;
         return true;
     }
 
-    public int getAge() {
+    private int getAge() {
         return age;
     }
 
-    public boolean setAge(int age) {
+    private boolean setAge(int age) {
         if(age <= 0) return false;
         this.age = age;
         return true;
     }
 
-    public Class getaClass() {
+    private Class getaClass() {
         return aClass;
     }
 
-    public boolean setaClass(Class aClass) {
+    private boolean setaClass(Class aClass) {
         if(aClass == null) return false;
         this.aClass = aClass;
         return true;

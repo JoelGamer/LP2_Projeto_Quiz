@@ -25,10 +25,10 @@ public class SystemOptionQuiz {
 
     public void optionsQuizzes(Scanner scanner){
         while(true){
-            System.out.println("Escolha uma das opções abaixo relacionados as questões:");
-            System.out.println("1 - Cadastrar uma nova questão.");
-            System.out.println("2 - Mostrar todas as questões cadastradas.");
-            System.out.println("3 - Mostrar uma questão especifica.");
+            System.out.println("Escolha uma das opções abaixo relacionados aos quizzes:");
+            System.out.println("1 - Cadastrar um novo quiz.");
+            System.out.println("2 - Mostrar todos os quizzes cadastrados.");
+            System.out.println("3 - Mostrar um quiz especifico.");
             System.out.println(defaultBackOption());
             int option = scanner.nextInt();
             scanner.nextLine();
@@ -45,6 +45,7 @@ public class SystemOptionQuiz {
                 systemConsole.printQuizzes();
                 break;
             case 3 :
+                systemConsole.printQuiz();
                 break;
             case 0 :
                 return 1;

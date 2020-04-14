@@ -24,7 +24,7 @@ public class Quiz implements Serializable {
             System.out.println("É obrigatório inserir pelo menos uma turma ao quiz!");
             valid = false;
         } if (!setSituation(situation)){
-            System.out.println("É obrigatório inserir a situação quiz!");
+            System.out.println("É obrigatório inserir uma situação valida para o quiz!");
             valid = false;
         }
 
@@ -99,8 +99,8 @@ public class Quiz implements Serializable {
         return string;
     }
 
-    public boolean setSituation(byte situation) {
-        if(situation > 3 || situation < 1) return false;
+    private boolean setSituation(byte situation) {
+        if(situation > 3 || situation < 0) return false;
         this.situation = situation;
         return true;
     }

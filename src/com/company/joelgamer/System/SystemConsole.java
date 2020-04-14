@@ -30,7 +30,11 @@ public class SystemConsole {
     }
 
     public void printProfessor(){
-
+        System.out.println("Insira o nome da turma que você deseja buscar:");
+        String name = scanner.nextLine();
+        System.out.println("--------------------------------");
+        new ShowProfessor(systemStorage).showProfessor(name);
+        System.out.println("--------------------------------");
     }
 
     public void printProfessors(){
@@ -41,7 +45,11 @@ public class SystemConsole {
     }
 
     public void printQuestion(){
-
+        System.out.println("Insira o nome da turma que você deseja buscar:");
+        String title = scanner.nextLine();
+        System.out.println("--------------------------------");
+        new ShowQuestion(systemStorage).showQuestion(title);
+        System.out.println("--------------------------------");
     }
 
     public void printQuestions(){
@@ -52,7 +60,11 @@ public class SystemConsole {
     }
 
     public void printQuiz(){
-
+        System.out.println("Insira o nome da turma que você deseja buscar:");
+        String name = scanner.nextLine();
+        System.out.println("--------------------------------");
+        new ShowQuiz(systemStorage).showQuiz(name);
+        System.out.println("--------------------------------");
     }
 
     public void printQuizzes(){
@@ -63,7 +75,11 @@ public class SystemConsole {
     }
 
     public void printStudent(){
-
+        System.out.println("Insira o nome da turma que você deseja buscar:");
+        String name = scanner.nextLine();
+        System.out.println("--------------------------------");
+        new ShowStudent(systemStorage).showStudent(name);
+        System.out.println("--------------------------------");
     }
 
     public void printStudents(){

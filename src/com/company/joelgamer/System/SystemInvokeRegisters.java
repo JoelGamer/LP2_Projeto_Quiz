@@ -44,7 +44,9 @@ public class SystemInvokeRegisters {
 
     public void invokeRegisterQuiz(){
         while(true){
-            Quiz quiz = new RegisterQuiz().registerQuiz();
+            if(checkIfClassesExist()) break;
+            if(checkIfQuestionsExist()) break;
+            Quiz quiz = new RegisterQuiz(systemStorage).registerQuiz();
             if(quiz != null){
                 systemStorage.addToQuizzes(quiz);
                 break;
@@ -54,15 +56,30 @@ public class SystemInvokeRegisters {
 
     public void invokeRegisterStudent(){
         while(true) {
-            if(systemStorage.getClasses().isEmpty()){
-                System.out.println("Não tem como fazer um cadastro de um aluno sem ter pelo menos uma turma cadastrada!\n");
-                break;
-            }
+            if(checkIfClassesExist()) break;
             Student student = new RegisterStudent(systemStorage).registerStudent();
             if(student != null){
                 systemStorage.addToStudents(student);
                 break;
             }
         }
+    }
+
+    private boolean checkIfClassesExist(){
+        if(systemStorage.getClasses().isEmpty()){
+            System.out.println("Não tem como fazer um cadastro de um quiz sem ter pelo menos uma turma cadastrada!\n");
+            return true;
+        }
+
+        return false;
+    }
+
+    private boolean checkIfQuestionsExist(){
+        if(systemStorage.getQuestions().isEmpty()){
+            System.out.println("Não tem como fazer um cadastro de um quiz sem ter pelo menos uma questão cadastrada!\n");
+            return true;
+        }
+
+        return false;
     }
 }

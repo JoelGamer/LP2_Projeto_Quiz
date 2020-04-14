@@ -6,14 +6,14 @@ import com.company.joelgamer.System.SystemSearch;
 
 public class ShowClass {
 
-    SystemStorage systemStorage;
+    SystemSearch systemSearch;
 
     public ShowClass(SystemStorage systemStorage){
-        this.systemStorage = systemStorage;
+        this.systemSearch = new SystemSearch(systemStorage);
     }
 
     public void showClass(String name){
-        Class aClass = new SystemSearch(systemStorage).systemSearchClass(name);
+        Class aClass = systemSearch.systemSearchClass(name);
         if(aClass == null) System.out.println("Não existe nenhuma turma com esse nome!");
         else aClass.showData();
     }
