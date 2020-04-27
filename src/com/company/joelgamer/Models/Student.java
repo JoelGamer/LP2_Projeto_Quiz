@@ -8,58 +8,73 @@ public class Student implements Serializable {
     private String name;
     private int age;
     private Class aClass;
+    private Course course;
 
-    public boolean readData(String name, int age, Class aClass){
-        boolean valid = true;
+    public boolean readData(String name, int age, Class aClass, Course course){
+        boolean isValid = true;
 
-        if(!setName(name)){
+        if(setName(name)){
             System.out.println("É obrigatório inserir o nome do(a) aluno(a)!");
-            valid = false;
-        } if(!setAge(age)){
+            isValid = false;
+        } if(setAge(age)){
             System.out.println("É obrigatório inserir um valor válido para a idade do(a) aluno(a)!");
-            valid = false;
-        } if(!setaClass(aClass)){
+            isValid = false;
+        } if(setaClass(aClass)){
             System.out.println("É obrigatório inserir a turma do(a) aluno(a)!");
-            valid = false;
+            isValid = false;
+        } if(setCourse(course)) {
+            System.out.println("É obrigatório inserir o curso do(a) aluno(a)!");
+            isValid = false;
         }
 
-        if(valid) System.out.println("Aluno(a) " + name + " foi criado(a) com sucesso!");
-        return valid;
+        if(isValid) System.out.println("Aluno(a) " + name + " foi criado(a) com sucesso!");
+        return isValid;
     }
 
     public void showData(){
         System.out.println("Nome do(a) Aluno(a): " + getName());
         System.out.println("Idade do(a) Aluno(a): " + getAge());
         System.out.println("Turma do(a) Aluno(a): " + getaClass().getName());
+        System.out.println("Curso do(a) Aluno(a): " + getCourse().getName());
     }
 
     public String getName() {
         return name;
     }
 
-    private boolean setName(String name) {
-        if(name.equals("")) return false;
+    protected boolean setName(String name) {
+        if(name.equals("")) return true;
         this.name = name;
-        return true;
+        return false;
     }
 
-    private int getAge() {
+    protected int getAge() {
         return age;
     }
 
-    private boolean setAge(int age) {
-        if(age <= 0) return false;
+    protected boolean setAge(int age) {
+        if(age <= 0) return true;
         this.age = age;
-        return true;
+        return false;
     }
 
-    private Class getaClass() {
+    protected Class getaClass() {
         return aClass;
     }
 
-    private boolean setaClass(Class aClass) {
-        if(aClass == null) return false;
+    protected boolean setaClass(Class aClass) {
+        if(aClass == null) return true;
         this.aClass = aClass;
-        return true;
+        return false;
+    }
+
+    protected Course getCourse() {
+        return this.course;
+    }
+
+    protected boolean setCourse(Course course) {
+        if(course == null) return true;
+        this.course = course;
+        return false;
     }
 }

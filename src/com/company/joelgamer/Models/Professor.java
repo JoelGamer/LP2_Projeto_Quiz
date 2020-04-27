@@ -1,17 +1,20 @@
 package com.company.joelgamer.Models;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Professor implements Serializable {
+public class Professor extends Employee implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    private String name;
+    private ArrayList<Class> classes = new ArrayList<>();
 
-    public boolean readData(String name){
+    public boolean readData(String name, ArrayList<Class> classes){
         boolean valid = true;
 
         if(!setName(name)){
             System.out.println("É obrigatório inserir o nome do(a) professor(a)!");
+            valid = false;
+        } if (!setClasses(classes)) {
+            System.out.println("É obrigatório inserir pelo menos uma turma ao quiz!");
             valid = false;
         }
 
@@ -19,17 +22,18 @@ public class Professor implements Serializable {
         return valid;
     }
 
+    @Override
     public void showData(){
         System.out.println("Nome do(a) Professor(a): " + getName());
     }
 
-    public String getName() {
-        return name;
+    private ArrayList<Class> getClasses() {
+        return classes;
     }
 
-    private boolean setName(String name) {
-        if(name.equals("")) return false;
-        this.name = name;
+    private boolean setClasses(ArrayList<Class> classes) {
+        if(classes.isEmpty()) return false;
+        this.classes = classes;
         return true;
     }
 }
