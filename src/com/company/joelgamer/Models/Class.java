@@ -1,5 +1,7 @@
 package com.company.joelgamer.Models;
 
+import com.company.joelgamer.Exceptions.InvalidInput;
+
 import java.io.Serializable;
 
 public class Class implements Serializable {
@@ -7,16 +9,9 @@ public class Class implements Serializable {
     private static final long serialVersionUID = 1L;
     private String name;
 
-    public boolean readData(String name){
-        boolean valid = true;
-
-        if(!setName(name)){
-            System.out.println("É obrigatório inserir o nome da classe!");
-            valid = false;
-        }
-
-        if(valid) System.out.println(name + " cadastrado com sucesso!\n");
-        return valid;
+    public void readData(String name) throws InvalidInput {
+        setName(name);
+        System.out.println(name + " cadastrado com sucesso!\n");
     }
 
     public void showData(){
@@ -27,9 +22,8 @@ public class Class implements Serializable {
         return name;
     }
 
-    private boolean setName(String name){
-        if(name.equals("")) return false;
+    private void setName(String name) throws InvalidInput {
+        if(name.equals("")) throw new InvalidInput("É obrigatório inserir o nome da classe!");
         this.name = name;
-        return true;
     }
 }

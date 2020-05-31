@@ -1,5 +1,7 @@
 package com.company.joelgamer.Models;
 
+import com.company.joelgamer.Exceptions.InvalidInput;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -8,49 +10,56 @@ public class Question implements Serializable {
     private static final long serialVersionUID = 1L;
     private String title;
     private ArrayList<String> answers;
-    private int correctAnswer;
+    private int correctAnswerObjective;
+    private String correctAnswerDescriptive;
+    private double points;
+    private byte type;
 
-    public boolean readData(String title, ArrayList<String> answers, int correctAnswer){
-        boolean valid = true;
+    public void readData(String title, ArrayList<String> answers, int correctAnswerObjective, byte type, double points) throws InvalidInput {
+        setTitle(title);
+        setAnswers(answers);
+        setCorrectAnswerObjective(correctAnswerObjective);
+        setType(type);
+        setPoints(points);
+        System.out.println("Questão " + title + " criado com sucesso!");
+    }
 
-        if(!setTitle(title)){
-            System.out.println("É obrigatório ter o titulo da questão!");
-            valid = false;
-        } if(!setAnswers(answers)){
-            System.out.println("É obrigatório ter pelo menos uma resposta para escolher!");
-            valid = false;
-        } if(!setCorrectAnswer(correctAnswer)){
-            System.out.println("É obrigatório ter um valor para saber qual que é a resposta correta!");
-            valid = false;
-        }
-        if(valid) System.out.println("Questão " + title + " criado com sucesso!");
-        return valid;
+    public void readData(String title, String correctAnswerDescriptive, byte type, double points) throws InvalidInput {
+        setTitle(title);
+        setCorrectAnswerDescriptive(correctAnswerDescriptive);
+        setType(type);
+        setPoints(points);
+        System.out.println("Questão " + title + " criado com sucesso!");
     }
 
     public void showData(){
         System.out.println("Titulo da pergunta: " + getTitle());
-        System.out.println("Respostas relacionadas a questão: " + answersToString());
-        System.out.println("ID da resposta correta: " + getCorrectAnswer());
+        if(getType() == 1) {
+            System.out.println("Respostas relacionadas a questão: " + answersToString());
+            System.out.println("ID da resposta correta: " + getCorrectAnswerObjective());
+        } else {
+            System.out.println("Resposta correta: " + getCorrectAnswerDescriptive());
+        }
+        System.out.println("O tipo da questão: " + getTypeInString());
+        System.out.println("O valor da questão: " + getPoints());
     }
 
     public String getTitle(){
         return title;
     }
 
-    private boolean setTitle(String title) {
-        if(title.equals("")) return false;
+    private void setTitle(String title) throws InvalidInput {
+        if(title.equals("")) throw new InvalidInput("É obrigatório ter o titulo da questão!");
         this.title = title;
-        return true;
     }
 
-    private ArrayList<String> getAnswers() {
+    public ArrayList<String> getAnswers() {
         return answers;
     }
 
-    private boolean setAnswers(ArrayList<String> answers) {
-        if(answers.isEmpty()) return false;
+    private void setAnswers(ArrayList<String> answers) throws InvalidInput {
+        if(answers.isEmpty()) throw new InvalidInput("É obrigatório ter pelo menos duas resposta para escolher!");
         this.answers = answers;
-        return true;
     }
 
     private String answersToString(){
@@ -62,13 +71,44 @@ public class Question implements Serializable {
         return string.toString();
     }
 
-    private int getCorrectAnswer() {
-        return correctAnswer;
+    public int getCorrectAnswerObjective() {
+        return correctAnswerObjective;
     }
 
-    private boolean setCorrectAnswer(int correctAnswer) {
-        if(correctAnswer <= 0) return false;
-        this.correctAnswer = correctAnswer;
-        return true;
+    private void setCorrectAnswerObjective(int correctAnswerObjective) throws InvalidInput {
+        if(correctAnswerObjective > 5 || correctAnswerObjective <= 0) throw new InvalidInput("É obrigatório ter um valor para saber qual que é a resposta correta!");
+        this.correctAnswerObjective = correctAnswerObjective;
+    }
+
+    public String getCorrectAnswerDescriptive() {
+        return correctAnswerDescriptive;
+    }
+
+    private void setCorrectAnswerDescriptive(String correctAnswerDescriptive) throws InvalidInput {
+        if(correctAnswerDescriptive.equalsIgnoreCase("")) throw new InvalidInput("A resposta correta descritiva não pode ser em branco!");
+        this.correctAnswerDescriptive = correctAnswerDescriptive;
+    }
+
+    public double getPoints() {
+        return points;
+    }
+
+    private void setPoints(double points) throws InvalidInput {
+        if(points < 0) throw new InvalidInput("A questão não pode ter uma pontuação menor que 0!");
+        this.points = points;
+    }
+
+    public byte getType() {
+        return type;
+    }
+
+    private void setType(byte type) throws InvalidInput {
+        if(type > 2 || type < 0) throw new InvalidInput("É obrigatório informar um tipo válido para a questão!");
+        this.type = type;
+    }
+
+    private String getTypeInString() {
+        if(getType() == 1) return "Objetiva";
+        return "Descritiva";
     }
 }

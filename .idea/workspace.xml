@@ -2,23 +2,108 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4238e58a-0c59-4f88-84fd-72531ffd755b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/PostGraduateStudent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/University.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Application/QuizAnswer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Application/Startup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/CoreValidations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionGraduateStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionPostGraduateStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionUniversity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Exceptions/InvalidGenericObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Exceptions/InvalidInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Exceptions/ObjectNotFound.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Exceptions/RequirementsNotMet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Employee/Professor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Student/GraduateStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Student/PostGraduateStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Student/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterUniversity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/Student/RegisterGraduateStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/Student/RegisterPosGraduateStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/Student/RegisterStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Show/MultipleShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Show/SingleShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Professor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Professor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/PostGraduateStudent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Professor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Question.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Quiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Models/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterProfessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterProfessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterQuestion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterQuestion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterQuiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterQuiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Register/RegisterStudent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowClasses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowProfessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowProfessors.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowQuestion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowQuestions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowQuiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowQuizzes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowStudent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/Show/ShowStudents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionProfessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionQuestion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionQuiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Options/SystemOptionStudents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Storage/SystemStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Storage/SystemStorageLoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/Storage/SystemStorageSave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/SystemConsole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/SystemInvokeRegisters.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projeto_Quiz_LP2/com/company/joelgamer/System/SystemSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/PostGraduateStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Professor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Question.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Quiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Quiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Models/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Models/University.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterProfessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterProfessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Register/RegisterStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowClasses.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowProfessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowProfessors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowQuestion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowQuestions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowQuiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowQuizzes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/Show/ShowStudents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionProfessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionProfessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionQuestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionQuestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Options/SystemOptionStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Options/CoreOptionStudents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Storage/SystemStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Storage/CoreStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Storage/SystemStorageLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Storage/CoreStorageLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/Storage/SystemStorageSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/Storage/CoreStorageSave.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/CoreConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemInvokeRegisters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/CoreInvokeRegisters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/joelgamer/System/SystemSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/joelgamer/Core/CoreSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="LP2_Projeto_Quiz" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,28 +119,32 @@
   <component name="ProjectId" id="1ZxQPx90sypvve7Zfx3UhNr2XGP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.company.joelgamer.System.Storage" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.Students">
+    <configuration name="Registration" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.joelgamer.Main" />
       <module name="Projeto_Quiz_LP2" />
+      <option name="PROGRAM_PARAMETERS" value="-r" />
       <option name="REDIRECT_INPUT" value="true" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -63,23 +152,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Students" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.company.joelgamer.Main" />
+      <module name="Projeto_Quiz_LP2" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Students" />
+      <item itemvalue="Application.Registration" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Registration" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -99,28 +188,32 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="555" y="200" width="800" height="729" key="#Intentions/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586889343055" />
-    <state x="198" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586387391753">
+    <state x="198" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590894349053">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="198" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586387391753" />
+    <state x="198" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590894349053" />
     <state x="1426" y="1134" key="#com.intellij.execution.impl.EditConfigurationsDialog/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586379657632" />
     <state x="688" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586719666768">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="688" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586719666768" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1586390994969">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1590884562934">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586390994969" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590884562934" />
     <state x="729" y="404" width="470" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586710662507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="729" y="404" width="470" height="238" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1586710662507" />
-    <state x="874" y="0" width="734" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586710675645">
+    <state x="842" y="0" width="734" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590879495845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="874" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586710675645" />
+    <state x="842" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590879495845" />
     <state x="1907" y="1107" width="734" height="741" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586464951973" />
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590886963928">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590886963928" />
     <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1586724098940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -129,71 +222,80 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586580209128" />
-    <state width="938" height="286" key="GridCell.Tab.0.bottom" timestamp="1587955789197">
+    <state width="1877" height="319" key="GridCell.Tab.0.bottom" timestamp="1590895608851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="286" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587955789197" />
+    <state width="1877" height="319" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590895608851" />
     <state width="1874" height="315" key="GridCell.Tab.0.bottom/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586891981756" />
     <state width="1320" height="175" key="GridCell.Tab.0.bottom/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586466052733" />
-    <state width="938" height="286" key="GridCell.Tab.0.center" timestamp="1587955789197">
+    <state width="1877" height="319" key="GridCell.Tab.0.center" timestamp="1590895608851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="286" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587955789197" />
+    <state width="1877" height="319" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590895608851" />
     <state width="1874" height="315" key="GridCell.Tab.0.center/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586891981756" />
     <state width="1320" height="175" key="GridCell.Tab.0.center/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586466052733" />
-    <state width="938" height="286" key="GridCell.Tab.0.left" timestamp="1587955789197">
+    <state width="1877" height="319" key="GridCell.Tab.0.left" timestamp="1590895608850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="286" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587955789197" />
+    <state width="1877" height="319" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590895608850" />
     <state width="1874" height="315" key="GridCell.Tab.0.left/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586891981756" />
     <state width="1320" height="175" key="GridCell.Tab.0.left/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586466052733" />
-    <state width="938" height="286" key="GridCell.Tab.0.right" timestamp="1587955789197">
+    <state width="1877" height="319" key="GridCell.Tab.0.right" timestamp="1590895608851">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="938" height="286" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587955789197" />
+    <state width="1877" height="319" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590895608851" />
     <state width="1874" height="315" key="GridCell.Tab.0.right/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586891981756" />
     <state width="1320" height="175" key="GridCell.Tab.0.right/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586466052733" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1586729150558">
+    <state width="631" height="347" key="GridCell.Tab.1.bottom" timestamp="1590879757894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586729150558" />
+    <state width="631" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590879757894" />
     <state width="1320" height="219" key="GridCell.Tab.1.bottom/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586379887840" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1586729150558">
+    <state width="631" height="347" key="GridCell.Tab.1.center" timestamp="1590879757894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586729150558" />
+    <state width="631" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590879757894" />
     <state width="1320" height="219" key="GridCell.Tab.1.center/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586379887840" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1586729150558">
+    <state width="631" height="347" key="GridCell.Tab.1.left" timestamp="1590879757894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586729150558" />
+    <state width="631" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590879757894" />
     <state width="1320" height="219" key="GridCell.Tab.1.left/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586379887840" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1586729150558">
+    <state width="631" height="347" key="GridCell.Tab.1.right" timestamp="1590879757894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586729150558" />
+    <state width="631" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590879757894" />
     <state width="1320" height="219" key="GridCell.Tab.1.right/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586379887840" />
     <state x="440" y="98" key="SettingsEditor" timestamp="1586886911742">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586390809005" />
     <state x="440" y="98" key="SettingsEditor/1285.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1586886911742" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1587952319227">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1587955923970">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587952319227" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587955923970" />
     <state x="1752" y="1333" key="com.intellij.ide.util.TipDialog/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586798839918" />
+    <state x="719" y="333" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1590788630034">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="333" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590788630034" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1590888061173">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590888061173" />
     <state x="342" y="140" key="new project wizard" timestamp="1587599312039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1587599312039" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1586727792916">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1590788779905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586727792916" />
-    <state x="1631" y="1169" width="672" height="678" key="search.everywhere.popup" timestamp="1586371906188">
-      <screen x="1285" y="1080" width="1366" height="768" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590788779905" />
+    <state x="486" y="121" width="672" height="160" key="search.everywhere.popup" timestamp="1590896102239">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="486" y="121" width="672" height="160" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590896102239" />
     <state x="1631" y="1169" width="672" height="678" key="search.everywhere.popup/1285.1080.1366.768/0.0.1920.1080@1285.1080.1366.768" timestamp="1586371906188" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

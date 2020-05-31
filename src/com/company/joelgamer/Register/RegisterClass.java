@@ -1,5 +1,6 @@
 package com.company.joelgamer.Register;
 
+import com.company.joelgamer.Exceptions.InvalidInput;
 import com.company.joelgamer.Models.Class;
 
 import java.util.Scanner;
@@ -10,8 +11,13 @@ public class RegisterClass {
         System.out.println("Insira o nome da turma:");
         String name = scanner.nextLine();
 
-        Class aClass = new Class();
-        if(aClass.readData(name)) return aClass;
-        return null;
+        try {
+            Class aClass = new Class();
+            aClass.readData(name);
+            return aClass;
+        } catch (InvalidInput i) {
+            System.out.println(i.getMessage());
+            return null;
+        }
     }
 }

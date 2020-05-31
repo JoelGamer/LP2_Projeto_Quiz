@@ -1,20 +1,22 @@
 package com.company.joelgamer.Register;
 
+import com.company.joelgamer.Exceptions.InvalidInput;
+import com.company.joelgamer.Exceptions.ObjectNotFound;
 import com.company.joelgamer.Models.Class;
 import com.company.joelgamer.Models.Question;
 import com.company.joelgamer.Models.Quiz;
-import com.company.joelgamer.System.Storage.SystemStorage;
-import com.company.joelgamer.System.SystemSearch;
+import com.company.joelgamer.Core.Storage.CoreStorage;
+import com.company.joelgamer.Core.CoreSearch;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RegisterQuiz {
 
-    SystemSearch systemSearch;
+    CoreSearch coreSearch;
 
-    public RegisterQuiz(SystemStorage systemStorage){
-        systemSearch = new SystemSearch(systemStorage);
+    public RegisterQuiz(CoreStorage coreStorage){
+        coreSearch = new CoreSearch(coreStorage);
     }
 
     public Quiz registerQuiz(){
@@ -33,9 +35,14 @@ public class RegisterQuiz {
         System.out.println("Rascunho - R, Pronto - P e Inativo - I");
         byte situation = getSituationStringToByte(scanner.nextLine().toUpperCase());
 
-        Quiz quiz = new Quiz();
-        if(quiz.readData(name, questions, classes, situation)) return quiz;
-        return null;
+        try {
+            Quiz quiz = new Quiz();
+            quiz.readData(name, questions, classes, situation);
+            return quiz;
+        } catch (InvalidInput invalidInput) {
+            invalidInput.printStackTrace();
+            return null;
+        }
     }
 
     private ArrayList<Question> addQuestionsToQuiz(Scanner scanner){
@@ -46,19 +53,20 @@ public class RegisterQuiz {
             System.out.println("Insira o titulo da " + i + "ª questão que deseja colocar no quiz:");
             while(true){
                 String questionTitle = scanner.nextLine();
-                Question question = systemSearch.systemSearchQuestion(questionTitle);
-                if(question != null) {
-                    System.out.println("Você deseja adicionar essa questão para o quiz? (S/N)");
-                    System.out.println(question.getTitle());
-                    if(scanner.nextLine().toUpperCase().equals("S")){
-                        questions.add(question);
-                        break;
-                    }
-
-                    System.out.println("Reinsira novamente o titulo da questão:");
+                Question question;
+                try {
+                    question = coreSearch.searchQuestion(questionTitle);
+                } catch (ObjectNotFound o) {
+                    System.out.println(o.getMessage());
+                    continue;
                 }
-
-                System.out.println("Não existe nenhuma questão com esse titulo! Insira novamente o titulo da questão:");
+                System.out.println("Você deseja adicionar essa questão para o quiz? (S/N)");
+                System.out.println(question.getTitle());
+                if(scanner.nextLine().toUpperCase().equals("S")){
+                    questions.add(question);
+                    break;
+                }
+                System.out.println("Reinsira novamente o titulo da questão:");
             }
         }
 
@@ -73,19 +81,20 @@ public class RegisterQuiz {
             System.out.println("Insira o nome da " + i + "ª turma que deseja colocar no quiz:");
             while(true){
                 String className = scanner.nextLine();
-                Class aClass = systemSearch.systemSearchClass(className);
-                if(aClass != null){
-                    System.out.println("Você deseja adicionar essa turma para o quiz? (S/N)");
-                    System.out.println(aClass.getName());
-                    if(scanner.nextLine().toUpperCase().equals("S")){
-                        classes.add(aClass);
-                        break;
-                    }
-
-                    System.out.println("Reinsira novamente o nome da turma:");
+                Class aClass;
+                try {
+                    aClass = coreSearch.searchClass(className);
+                } catch (ObjectNotFound o) {
+                    System.out.println(o.getMessage());
+                    continue;
                 }
-
-                System.out.println("Não existe nenhuma turma com esse nome! Insira novamente o nome da turma:");
+                System.out.println("Você deseja adicionar essa turma para o quiz? (S/N)");
+                System.out.println(aClass.getName());
+                if(scanner.nextLine().toUpperCase().equals("S")){
+                    classes.add(aClass);
+                    break;
+                }
+                System.out.println("Reinsira novamente o nome da turma:");
             }
         }
 
@@ -93,13 +102,15 @@ public class RegisterQuiz {
     }
 
     private byte getSituationStringToByte(String string){
-        if(string.equals("R")){
-            return 1;
-        } if(string.equals("P")){
-            return 2;
-        } if (string.equals("I")){
-            return 3;
+        switch (string) {
+            case "R" :
+                return 1;
+            case "P" :
+                return 2;
+            case "I" :
+                return 3;
+            default :
+                return 0;
         }
-        return 0;
     }
 }

@@ -1,5 +1,7 @@
 package com.company.joelgamer.Models;
 
+import com.company.joelgamer.Exceptions.InvalidInput;
+
 import java.io.Serializable;
 
 public class University implements Serializable {
@@ -7,15 +9,8 @@ public class University implements Serializable {
     private static final long serialVersionUID = 1L;
     private String name;
 
-    public boolean readData(String name) {
-        boolean isValid = true;
-
-        if(setName(name)) {
-            System.out.println("Insira um nome válido para a Universidade!");
-            isValid = false;
-        }
-
-        return isValid;
+    public void readData(String name) throws InvalidInput {
+        setName(name);
     }
 
     public void showData() {
@@ -26,9 +21,8 @@ public class University implements Serializable {
         return this.name;
     }
 
-    private boolean setName(String name) {
-        if(name.equals("")) return true;
+    private void setName(String name) throws InvalidInput {
+        if(name.equals("")) throw new InvalidInput("Insira um nome válido para a Universidade!");
         this.name = name;
-        return true;
     }
 }
